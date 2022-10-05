@@ -16,7 +16,7 @@ class PythonUrl:
       r"(?:href|src)=(\"|\')((?!mailto|https).*?static.*?)(\"|\')")
     self.path_expression = re.compile(r"static(/|\\)(.*)")
 
-  def to_flask(self):
+  def to_flask(self, django=False):
 
     with open(self.file, "r") as f:
       file_content = f.read()
@@ -29,10 +29,13 @@ class PythonUrl:
         for item in match:
           print(item.group(2))
           link = self.path_expression.search(item.group(2)).group(2)
-          print( f"{{url_for('static', filename='{link}')}}")
 
-          file_content = file_content.replace(item.group(2),
-                               f"{{url_for('static', filename='{link}')}}")
+          if django:
+            file_content = file_content.replace(item.group(2),
+                                                "{% static '" + link + "' %}")
+          else:
+            file_content = file_content.replace(
+              item.group(2), "{{url_for('static', filename='" + link + "}')}}")
           # file_content.replace(item.group(2), item.)
 
       #replacing thec
@@ -41,6 +44,9 @@ class PythonUrl:
         # print(file_content)
         ff.write(file_content)
 
+  def to_django(self):
+    pass
 
-file = PythonUrl("index 1.html")
-file.to_flask()
+
+file = PythonUrl("index.html")
+file.to_url(django=True)

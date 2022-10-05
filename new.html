@@ -21,7 +21,7 @@
     <!-- font awesome cdn link -->
     <script src="https://kit.fontawesome.com/a09955f591.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="{url_for('static', filename='css/main.css')}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 
 <body>
@@ -29,14 +29,14 @@
     
       
     <div class="carousel-item active">
-      <img src="{url_for('static', filename='assets/header-img/image-2.jpg')}" class="d-block w-100 img-fit" height="500px" alt="...">
+      <img src="{% static 'assets/header-img/image-2.jpg' %}" class="d-block w-100 img-fit" height="500px" alt="...">
       <div class="carousel-caption ">
           <h2 class="display-2">Second slide label</h2>
           <p class="">Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item ">
-      <img src="{url_for('static', filename='assets/header-img/image-3.jpg')}" class="d-block w-100 img-fit" height="500px" 
+      <img src="{% static 'assets/header-img/image-3.jpg' %}" class="d-block w-100 img-fit" height="500px" 
     
         <section class="our-extramoral container my-5 pt-5">
             
@@ -47,7 +47,7 @@
             <div class="d-flex overfow-auto">
 
                 <div class="teacher-container text-center">
-                    <img class="rounded-circle mb-2" src="{url_for('static', filename='assets/teachers/img-1.jpg')}" width="200px" height="200px" alt="">
+                    <img class="rounded-circle mb-2" src="{% static 'assets/teachers/img-1.jpg' %}" width="200px" height="200px" alt="">
                     <h5>Godfred Godwin Obot</h5>
                     <p class="d-none">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, quod?
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="teacher-container text-center">
-                    <img class="rounded-circle mb-2" src="{url_for('static', filename='assets/teachers/img-2.jpg')}" width="200px" height="200px" alt="">
+                    <img class="rounded-circle mb-2" src="{% static 'assets/teachers/img-2.jpg' %}" width="200px" height="200px" alt="">
                     <h5>Godfred Godwin Obot</h5>
                     <p class="d-none">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, quod?
@@ -63,7 +63,7 @@
                 </div>
 
                 <div class="teacher-container text-center">
-                    <img class="rounded-circle mb-2" src="{url_for('static', filename='assets/teachers/img-3.jpg')}" width="200px" height="200px" alt="">
+                    <img class="rounded-circle mb-2" src="{% static 'assets/teachers/img-3.jpg' %}" width="200px" height="200px" alt="">
                     <h5>Godfred Godwin Obot</h5>
                     <p class="d-none">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, quod?
@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="teacher-container text-center">
-                    <img class="rounded-circle mb-2" src="{url_for('static', filename='assets/teachers/img-4.jpg')}" width="200px" height="200px" alt="">
+                    <img class="rounded-circle mb-2" src="{% static 'assets/teachers/img-4.jpg' %}" width="200px" height="200px" alt="">
                     <h5>Godfred Godwin Obot</h5>
                     <p class="d-none">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, quod?
